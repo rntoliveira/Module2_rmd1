@@ -64,5 +64,20 @@ knitr::kable(head(cars),
 
 ## Insert equation
 
-$$ Y = \beta_0 / \beta_1x $$
+$$ Y = \hat{\beta_0} / \hat{\beta}_1x $$
+$$
+Y = \begin{pmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{pmatrix}
+$$
 
+## Insert Images
+
+Here is an insert image
+
+![Sunstar](sunstar.png)
+
+Here is the r logo
+
+![r logo](https://www.r-project.org/logo/Rlogo.svg)
