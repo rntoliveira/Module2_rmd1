@@ -1,0 +1,94 @@
+---
+title: "Module 2 - R Markdown document 1"
+author: "Renato Oliveira"
+date: "09/04/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# This is a level 1 header
+
+## R Markdown
+
+### This is a level 3 header
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+Here is a link to [GOOGLE](htttp://google.com)
+
+Here is a word in **bold** and another word in __bold__.
+
+Here is a word in *italics* an another word in _italics_.
+
+Whene compile our document, we are using `Rmarkdown` package.
+
+Here some examples R commands:
+
+```
+a = 2
+b = 3
+mean(c(a,b))
+```
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r pressure2, fig.width=5, fig.height=5, echo=FALSE}
+plot(pressure, xlab = "Temperatura (°C)", ylab = "Pressão (KPa/m²)")
+```
+
+
+## Insert tables
+
+```{r}
+knitr::kable(head(cars),
+             caption = "Top six rows of cars dataset")
+```
+
+
+## Insert equation
+
+$$ Y = \hat{\beta_0} / \hat{\beta}_1x $$
+$$
+Y = 
+\begin{pmatrix}
+1 & 2 & 3\\
+a & b & c\\
+x & y & z
+\end{pmatrix}
+*
+\begin{pmatrix}
+ \hat{\alpha_i}\\
+ \hat{\beta_i}\\
+ \hat{\gamma_i}
+\end{pmatrix}^{-1}
+$$
+
+## Insert tables
+
+Here is insert a table
+
+```{r echo=FALSE, results='asis'}
+knitr::kable(mtcars[1:5, ], caption = "A knitr kable.")
+```
+
+
+
+
+
